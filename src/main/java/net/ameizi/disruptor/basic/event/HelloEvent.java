@@ -1,4 +1,4 @@
-package net.ameizi.disruptor.event;
+package net.ameizi.disruptor.basic.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

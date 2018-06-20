@@ -1,7 +1,7 @@
-package net.ameizi.disruptor.handler;
+package net.ameizi.disruptor.basic.handler;
 
 import com.lmax.disruptor.EventHandler;
-import net.ameizi.disruptor.event.HelloEvent;
+import net.ameizi.disruptor.basic.event.HelloEvent;
 
 public class HelloEventHandler implements EventHandler<HelloEvent> {
 

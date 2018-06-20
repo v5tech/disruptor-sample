@@ -1,7 +1,7 @@
-package net.ameizi.disruptor.producer;
+package net.ameizi.disruptor.basic.producer;
 
 import com.lmax.disruptor.RingBuffer;
-import net.ameizi.disruptor.event.HelloEvent;
+import net.ameizi.disruptor.basic.event.HelloEvent;
 
 import java.nio.ByteBuffer;
 
@@ -13,12 +13,12 @@ public class HelloEventProducer {
         this.ringBuffer = ringBuffer;
     }
 
-    public void onData(ByteBuffer bb)
+    public void onData(ByteBuffer byteBuffer)
     {
         long sequence = ringBuffer.next();
         try{
             HelloEvent event = ringBuffer.get(sequence);
-            event.setValue(String.valueOf(bb.getLong(0)));
+            event.setValue(String.valueOf(byteBuffer.getLong(0)));
         }finally{
             ringBuffer.publish(sequence);
         }

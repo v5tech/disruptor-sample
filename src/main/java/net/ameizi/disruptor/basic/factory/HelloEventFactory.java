@@ -1,7 +1,7 @@
-package net.ameizi.disruptor.factory;
+package net.ameizi.disruptor.basic.factory;
 
 import com.lmax.disruptor.EventFactory;
-import net.ameizi.disruptor.event.HelloEvent;
+import net.ameizi.disruptor.basic.event.HelloEvent;
 
 public class HelloEventFactory implements EventFactory<HelloEvent> {
 
